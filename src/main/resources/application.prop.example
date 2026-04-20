@@ -1,6 +1,6 @@
-server.port=8086
 spring.application.name=LogisticsService
-spring.datasource.url=jdbc:postgresql://localhost:5432/databasename
+server.port=8086
+spring.datasource.url=jdbc:databse_url
 spring.datasource.username=username
 spring.datasource.password=password
 spring.datasource.driver-class-name=org.postgresql.Driver
@@ -10,3 +10,8 @@ spring.jpa.show-sql=true
 spring.jpa.open-in-view=false
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.properties.hibernate.format_sql=true
+goggle.map.api.key=api_key
+goggle.base.url=https://geocode.googleapis.com/v4/
+nominatim.url=https://nominatim.openstreetmap.org/
+nominatim.user.agent=agent
+spring.kafka.bootstrap-servers=localhost:9092
