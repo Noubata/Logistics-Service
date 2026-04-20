@@ -1,4 +1,4 @@
-package beny.logisticsservice.Config;
+package beny.logisticsservice.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

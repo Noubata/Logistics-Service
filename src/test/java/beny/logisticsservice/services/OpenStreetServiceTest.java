@@ -9,9 +9,9 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
-class MapServiceTest {
+class OpenStreetServiceTest {
     @Autowired
-    private MapService mapService;
+    private OpenStreetService openStreetService;
     @Test
     @DisplayName("""
             Test That when i call MapService GetAddressGecoding with a valid address
@@ -19,7 +19,7 @@ class MapServiceTest {
             """)
     void testGetGecodingAddress() {
         String address = "Lagos";
-        Map<String,String> geoCodeLocations = mapService.getAddressGecoding(address);
+        Map<String,String> geoCodeLocations = openStreetService.getAddressGecoding(address);
         assertNotNull(geoCodeLocations);
         assertNotNull(geoCodeLocations.get("lat"));
         assertNotNull(geoCodeLocations.get("lng"));
@@ -31,7 +31,7 @@ class MapServiceTest {
             """)
     void testGetAddressGecodingWithNewAddress() {
         String addres = "abuja";
-        Map<String,String> geoCodeLocations = mapService.getAddressGecoding(addres);
+        Map<String,String> geoCodeLocations = openStreetService.getAddressGecoding(addres);
         assertNotNull(geoCodeLocations);
         assertNotNull(geoCodeLocations.get("lat"));
         assertNotNull(geoCodeLocations.get("lng"));
